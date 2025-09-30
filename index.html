@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポスゲー</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&family=Orbitron:wght@900&display=swap" rel="stylesheet">
+</head>
+  <style>/* 基本設定 */
+body {
+    background-color: #1a1a1a; /* ダークな背景色 */
+    color: #ffffff;
+    font-family: 'Noto Sans JP', sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ヘッダー */
+.site-header {
+    margin-bottom: 40px;
+}
+
+.site-title {
+    font-family: 'Orbitron', sans-serif; /* テクノ風のフォント */
+    font-size: 3rem; /* 48px */
+    color: #00d9ff; /* サイバーな青色 */
+    margin: 0;
+    text-shadow: 0 0 10px #00d9ff, 0 0 20px #00d9ff;
+}
+
+.site-subtitle {
+    font-size: 1rem; /* 16px */
+    color: #cccccc;
+    margin: 5px 0 0 0;
+    letter-spacing: 2px;
+}
+
+/* ゲーム一覧のグリッドレイアウト */
+.game-grid {
+    display: grid;
+    /* 画面幅に応じて列数を自動調整 */
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 25px;
+    max-width: 800px;
+    margin: 0 auto; /* 中央寄せ */
+}
+
+/* 各ゲームのスタイル */
+.game-item {
+    background-color: #2c2c2c;
+    border-radius: 15px; /* 角を丸くする */
+    overflow: hidden; /* 画像のはみ出しを防ぐ */
+    text-decoration: none; /* リンクの下線を消す */
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* スマホでのタップ時やPCでのホバー時に少し浮き上がるエフェクト */
+.game-item:hover,
+.game-item:active {
+    transform: scale(1.08) translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 217, 255, 0.3);
+}
+
+.game-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.game-title {
+    font-size: 0.9rem; /* 14.4px */
+    font-weight: bold;
+    padding: 12px 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box; /* paddingを含めて幅を計算 */
+}
+
+/* フッター */
+.site-footer {
+    margin-top: 60px;
+    color: #666666;
+    font-size: 0.8rem; /* 12.8px */
+}</style>
+<body>
+
+    <header class="site-header">
+        <h1 class="site-title">ポスゲー</h1>
+        <p class="site-subtitle">POSGEE - Browser Game Portal</p>
+    </header>
+
+    <main>
+        <div class="game-grid">
+            <a href="https://u-pos.github.io/yoichi-quiz/" class="game-item">
+                <img src="sample1.jpg" alt="与一クイズのアイコン">
+                <span class="game-title">与一クイズ</span>
+            </a>
+
+            <a href="https://u-pos.github.io/yhagetataki/" class="game-item">
+                <img src="sample2.jpg" alt="ハゲたたきのアイコン">
+                <span class="game-title">Y-ハゲたたき</span>
+            </a>
+
+            <a href="https://u-pos.github.io/skill-check-master/" class="game-item">
+                <img src="sample3.jpg" alt="スキルチェックマスターのアイコン">
+                <span class="game-title">Skill Check Master</span>
+            </a>
+
+            <a href="https://u-pos.github.io/doutor-master/" class="game-item">
+                <img src="sample4.jpg" alt="ドトールマスターのアイコン">
+                <span class="game-title">ドトールマスター</span>
+            </a>
+
+            </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 ポスゲー</p>
+    </footer>
+
+</body>
+</html>
